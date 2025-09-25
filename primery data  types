@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+int main() {
+	char ch = 'g';
+	int x = 567;
+	float y = 67.123f;
+	double z = 1909.452;
+	printf("value of x = %d\nvalue of z = %lf\nvalue of ch = %c\nvalue of y = %f\n", x, z, ch, y);
+	return 0;
+}
