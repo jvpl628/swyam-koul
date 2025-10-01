@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main(){
+    int marks;
+    printf("enter marks");
+    if(marks>=90)
+    printf("grade A+\n");
+    else if(marks>=80)
+    printf("grade A\n");
+    else if (marks>=70)
+    printf("grade B+\n");
+    else if(marks>=60)
+    printf("grade B\n");
+    else if (marks>=60)
+    printf("gradeB\n");
+    else if (marks>=50)
+    printf("gradec\n");
+    else
+    printf("grade F\n");
+    return 0;
+
+}
