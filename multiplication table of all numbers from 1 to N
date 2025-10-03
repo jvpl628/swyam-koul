@@ -1,0 +1,13 @@
+// wasp to write the multiplicatioin table of all the numbers from 1 to N
+#include <stdio.h>
+int main(){
+    int i,n;
+    unsigned long long product=1;
+    printf("enter the value of n = ");
+    scanf("%D",&n);
+    for (i=1;i<=n;i++){
+        product*=i;
+    }
+    printf("multiplication = %d",product);
+    return 0;
+}
