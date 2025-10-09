@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+#include <stdio.h>
+
+int main() {
+    int a, b, temp;
+
+    // Read two integers
+    scanf("%d %d", &a, &b);
+
+    // Euclidean algorithm for HCF (GCD)
+    while (b != 0) {
+        temp = b;
+        b = a % b;
+        a = temp;
+    }
+
+    // 'a' now contains the HCF
+    printf("%d\n", a);
+
+    return 0;
+}
