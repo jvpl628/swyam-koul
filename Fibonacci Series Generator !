@@ -1,0 +1,28 @@
+#include <stdio.h>int main(){
+int main() {
+    int n;
+    long long a = 0, b = 1, next;
+
+    // Read the number of terms
+    scanf("%d", &n);
+
+    // Handle special cases
+    if (n <= 0) {
+        return 0;
+    }
+
+    // Print first term
+    if (n >= 1)
+        printf("0");
+
+    // Print remaining terms
+    for (int i = 2; i <= n; i++) {
+        printf(" %lld", b);
+        next = a + b;
+        a = b;
+        b = next;
+    }
+
+    printf("\n");
+    return 0;
+}
