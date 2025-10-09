@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+int main() {
+    
+    int n, last, first;
+    scanf("%d", &n);
+    if (n>=0 && n<=9)
+        first = last = n;
+    else{
+        last = n%10;
+        n = n/10;
+        while(n!= 0){
+            first = n%10;
+            n = n/10;
+        }
+        
+    }
+
+    printf("%d %d", first, last);
+    return 0;
+}
