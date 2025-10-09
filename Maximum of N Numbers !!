@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+int main() {
+    int n, num, max;
+
+    // Read how many numbers will be entered
+    scanf("%d", &n);
+
+    // Read the first number and assume it's the maximum
+    scanf("%d", &max);
+
+    // Process remaining numbers
+    for (int i = 1; i < n; i++) {
+        scanf("%d", &num);
+        if (num > max) {
+            max = num;
+        }
+    }
+
+    // Print the maximum number
+    printf("%d\n", max);
+
+    return 0;
+}
