@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int n, i, isPrime = 1;
+
+    // Read input
+    scanf("%d", &n);
+
+    // 0, 1 and negative numbers are not prime
+    if (n <= 1) {
+        printf("Not Prime\n");
+        return 0;
+    }
+
+    // Check divisibility from 2 to sqrt(n)
+    for (i = 2; i <= sqrt(n); i++) {
+        if (n % i == 0) {
+            isPrime = 0;
+            break;
+        }
+    }
+
+    // Output result
+    if (isPrime)
+        printf("Prime\n");
+    else
+        printf("Not Prime\n");
+
+    return 0;
+}
