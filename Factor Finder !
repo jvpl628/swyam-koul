@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+#include <stdio.h>
+
+int main() {
+    int n;
+
+    // Read input
+    scanf("%d", &n);
+
+    // Handle negative input (factors of |n|)
+    if (n < 0) {
+        n = -n;
+    }
+
+    // Print all factors
+    for (int i = 1; i <= n; i++) {
+        if (n % i == 0) {
+            printf("%d", i);
+            if (i != n)  // avoid extra space after last factor
+                printf(" ");
+        }
+    }
+
+    printf("\n");
+    return 0;
+}
