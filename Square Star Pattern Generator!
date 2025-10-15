@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+#include <stdio.h>
+
+int main() {
+    int N;
+    scanf("%d", &N);  // Input number of rows and columns
+    
+    for (int i = 0; i < N; i++) {       // Loop for each row
+        for (int j = 0; j < N; j++) {   // Loop for each column
+            printf("* ");               // Print star followed by space
+        }
+        printf("\n");                   // Move to the next line
+    }
+
+    return 0;
+}
