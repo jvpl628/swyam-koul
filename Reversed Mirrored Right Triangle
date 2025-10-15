@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+#include <stdio.h>
+
+int main() {
+    int N;
+    scanf("%d", &N);  // Input number of rows
+
+    for (int i = 1; i <= N; i++) {          // Loop through rows
+        for (int j = i; j < N; j++) {       // Print leading spaces
+            printf("  ");                   // Two spaces for alignment
+        }
+        for (int k = 1; k <= i; k++) {      // Print stars
+            printf("* ");
+        }
+        printf("\n");                       // Move to next line
+    }
+
+    return 0;
+}
