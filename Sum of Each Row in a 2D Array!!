@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+#include <stdio.h>
+
+int main() {
+    int r, c;
+    scanf("%d %d", &r, &c); // Read number of rows and columns
+
+    int arr[r][c];
+
+    // Read elements of the array
+    for (int i = 0; i < r; i++) {
+        for (int j = 0; j < c; j++) {
+            scanf("%d", &arr[i][j]);
+        }
+    }
+
+    // Calculate and print sum of each row
+    for (int i = 0; i < r; i++) {
+        int rowSum = 0;
+        for (int j = 0; j < c; j++) {
+            rowSum += arr[i][j];
+        }
+        printf("%d\n", rowSum); // Print sum of current row
+    }
+
+    return 0;
+}
