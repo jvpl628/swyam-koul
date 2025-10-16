@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+#include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d", &n); // Read number of elements
+    int arr[n];
+
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]); // Read array elements
+    }
+
+    int uniqueFound = 0;
+
+    for (int i = 0; i < n; i++) {
+        int count = 0;
+
+        // Count how many times arr[i] appears in the array
+        for (int j = 0; j < n; j++) {
+            if (arr[i] == arr[j])
+                count++;
+        }
+
+        // If element appears only once, print it
+        if (count == 1) {
+            printf("%d ", arr[i]);
+            uniqueFound = 1;
+        }
+    }
+
+    // If no unique element found
+    if (!uniqueFound)
+        printf("No unique elements");
+
+    return 0;
+}
