@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+#include <stdio.h>
+
+int main() {
+    int R, C;
+    scanf("%d %d", &R, &C);  // Input number of rows and columns
+
+    int A[R][C], B[R][C], diff[R][C];
+
+    // Input first matrix
+    for (int i = 0; i < R; i++) {
+        for (int j = 0; j < C; j++) {
+            scanf("%d", &A[i][j]);
+        }
+    }
+
+    // Input second matrix
+    for (int i = 0; i < R; i++) {
+        for (int j = 0; j < C; j++) {
+            scanf("%d", &B[i][j]);
+        }
+    }
+
+    // Calculate difference (A - B)
+    for (int i = 0; i < R; i++) {
+        for (int j = 0; j < C; j++) {
+            diff[i][j] = A[i][j] - B[i][j];
+        }
+    }
+
+    // Print the resulting matrix
+    for (int i = 0; i < R; i++) {
+        for (int j = 0; j < C; j++) {
+            printf("%d ", diff[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
