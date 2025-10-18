@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int main() {
+    int R, C;
+    scanf("%d %d", &R, &C);  // Input number of rows and columns
+
+    int A[R][C], B[R][C], sum[R][C];
+
+    // Input first matrix
+    for (int i = 0; i < R; i++) {
+        for (int j = 0; j < C; j++) {
+            scanf("%d", &A[i][j]);
+        }
+    }
+
+    // Input second matrix
+    for (int i = 0; i < R; i++) {
+        for (int j = 0; j < C; j++) {
+            scanf("%d", &B[i][j]);
+        }
+    }
+
+    // Calculate sum of matrices
+    for (int i = 0; i < R; i++) {
+        for (int j = 0; j < C; j++) {
+            sum[i][j] = A[i][j] + B[i][j];
+        }
+    }
+
+    // Print the resulting matrix
+    for (int i = 0; i < R; i++) {
+        for (int j = 0; j < C; j++) {
+            printf("%d ", sum[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
