@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int sumArray(int arr[], int n) {
+    // Base case
+    if (n == 0)
+        return 0;
+
+    // Recursive case
+    return arr[n - 1] + sumArray(arr, n - 1);
+}
+
+int main() {
+    int n;
+    scanf("%d", &n);
+
+    int arr[n];
+
+    // Read array elements recursively (no loops allowed)
+    // Helper function to input recursively
+    int readArray(int arr[], int index, int n) {
+        if (index == n)
+            return 0;
+        scanf("%d", &arr[index]);
+        return readArray(arr, index + 1, n);
+    }
+
+    readArray(arr, 0, n);
+
+    int result = sumArray(arr, n);
+    printf("%d", result);
+
+    return 0;
+}
