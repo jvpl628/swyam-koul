@@ -1,0 +1,54 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+// Case-insensitive string compare function
+int compareIgnoreCase(const char *a, const char *b) {
+    while (*a && *b) {
+        char c1 = tolower(*a);
+        char c2 = tolower(*b);
+
+        if (c1 != c2)
+            return c1 - c2;
+
+        a++;
+        b++;
+    }
+    return tolower(*a) - tolower(*b);
+}
+
+int main() {
+    int N;
+    scanf("%d", &N);
+
+    char names[100][50];
+
+    // Read names
+    for (int i = 0; i < N; i++) {
+        scanf("%s", names[i]);
+    }
+
+    // Sorting using bubble sort (case-insensitive)
+    for (int i = 0; i < N - 1; i++) {
+        for (int j = 0; j < N - i - 1; j++) {
+            if (compareIgnoreCase(names[j], names[j + 1]) > 0) {
+                char temp[50];
+                strcpy(temp, names[j]);
+                strcpy(names[j], names[j + 1]);
+                strcpy(names[j + 1], temp);
+            }
+        }
+    }
+
+    // Print sorted names
+    for (int i = 0; i < N; i++) {
+        printf("%s\n", names[i]);
+    }
+
+    return 0;
+}
+
