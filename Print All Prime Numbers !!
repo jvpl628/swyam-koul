@@ -1,0 +1,24 @@
+Problem Statement
+
+Alex, a passionate math student, loves exploring number patterns. One day, while studying prime numbers, he decides to write a program that prints all prime numbers within a given range.
+
+Your task is to help Alex by writing a program that uses functions to print all prime numbers between two given integers (inclusive).
+
+You must define and use a function to check whether a number is prime or not, and then use that function to display all prime numbers within the interval.
+
+Input Format
+
+The first line contains two integers — start and end, representing the range (inclusive).
+Constraints
+
+1 ≤ start ≤end ≤ 10000
+Output Format
+
+Print all prime numbers between start and end separated by spaces.
+If no prime number exists in the given interval, print No prime numbers found.
+Sample Input 0
+
+10 30
+Sample Output 0
+
+11 13 17 19 23 29
