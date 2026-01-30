@@ -1,0 +1,35 @@
+//Program to convert Decimal number to Hexadecimal
+#include<stdio.h>
+#include<string.h>
+int main(){
+    int n;
+    char hexa[200] = "";
+    printf("Enter the Number: ");
+    scanf("%i", &n);
+    int temp = n;
+
+    while (temp != 0){
+        int rem = temp%16;
+        char str[2];
+        if (rem >=0 && rem <=9)
+            sprintf(str, "%i", rem);
+        else if(rem == 10)
+            str[0] = 'A';
+        else if(rem == 11)
+            str[0] = 'B';
+        else if(rem == 12)
+            str[0] = 'C';
+        else if(rem == 13)
+            str[0] = 'D';
+        else if(rem == 14)
+            str[0] = 'E';
+        else
+            str[0] = 'F';
+        str[1] ='\0';
+        strcat(hexa, str);
+        temp /= 16;
+    }
+    strrev(hexa);
+    printf("Hexadecimal of %i is %s", n, hexa);
+    return 0;
+}
